@@ -2,7 +2,7 @@ defmodule Buttons.Server do
   use GenMQTT
 
   def start_link do
-    GenMQTT.start_link(__MODULE__, nil, name: __MODULE__)
+    GenMQTT.start_link(__MODULE__, nil, name: __MODULE__, host: "iot.eclipse.org")
   end
 
   def turn_led_on do
